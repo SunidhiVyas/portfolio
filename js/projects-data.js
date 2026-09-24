@@ -50,7 +50,7 @@ const projects = [
     github: "https://github.com/SunidhiVyas/intelligent-abstention-ai" },
   { id: 12, title: "Market Regime Shift AI", category: "AI / ML · FINANCE",
     description: "Market regime detector — identifies shifts between bull/bear/sideways using ML signals and evaluation.",
-    image: "https://dummyimage.com/640x400/0a1430/6db0ff&text=Market+Regime+Shift+AI", technologies: ["Python", "Scikit-learn", "PyTorch", "RAG"],
+    image: "assets/projects/market-regime-shift-ai.webp", technologies: ["Python", "Scikit-learn", "PyTorch", "RAG"],
     github: "https://github.com/SunidhiVyas/market-regime-shift-ai" }
 ];
 const projectsPerPage = 6;
