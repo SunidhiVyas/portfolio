@@ -1,0 +1,9 @@
+{
+  "name": "sunidhi-vyas-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cinematic 3D portfolio (Three.js, no build step)",
+  "scripts": {
+    "start": "npx --yes serve . -l 3000"
+  }
+}
