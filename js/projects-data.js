@@ -38,7 +38,7 @@ const projects = [
     github: "https://github.com/SunidhiVyas/microservice-job-portal" },
   { id: 9, title: "Tomato Food Delivery", category: "WEB APP",
     description: "Swiggy-like delivery frontend — menu, cart, checkout & order tracking with responsive UI.",
-    image: "https://dummyimage.com/640x400/0a1430/6db0ff&text=Tomato+Food+Delivery", technologies: ["React", "JavaScript", "CSS", "REST APIs"],
+    image: "assets/projects/tomato-food-delivery.webp", technologies: ["React", "JavaScript", "CSS", "REST APIs"],
     github: "https://github.com/SunidhiVyas/tomato-food-delivery" },
   { id: 10, title: "Butterfly Effect Dashboard", category: "DATA · DASHBOARD",
     description: "Economic dashboard visualizing butterfly-effect causality — interactive charts, filters & Power BI style insights.",
