@@ -12,8 +12,7 @@ const contactConfig = {
   email: "vyaskhushi14@gmail.com",
   socialLinks: [
     { name: "GitHub",    url: "https://github.com/SunidhiVyas" },
-    { name: "LinkedIn",  url: "https://linkedin.com/in/sunidhi-vyas" },
-    { name: "Instagram", url: "https://instagram.com/v.khushiii" }
+    { name: "LinkedIn",  url: "https://linkedin.com/in/sunidhi-vyas" }
   ]
 };
 

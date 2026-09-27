@@ -73,6 +73,10 @@ h1.name .last{color:var(--blue);text-shadow:0 0 34px rgba(45,123,255,.55);margin
 .cta:hover{color:#fff;text-shadow:0 0 18px rgba(80,150,255,.9)}
 .cta:hover svg{transform:translateX(8px)}
 .cta:hover::before{box-shadow:0 0 26px 2px var(--blue)}
+.hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(.9rem,2.4vw,2.2rem)}
+.cta-2{gap:1rem;padding-left:1.5rem}
+.cta-2 svg{order:-1;width:1.05rem;height:1.05rem;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.cta-2:hover svg{transform:translateY(5px)}
 .social{display:flex;gap:1.5rem;margin-top:clamp(1.2rem,3vh,2.2rem);padding-left:1.7rem}
 .social a{color:var(--faint);transition:color .4s,filter .4s;display:grid;place-items:center;width:1.4rem;height:1.4rem}
 .social a:hover{color:var(--blue-hi);filter:drop-shadow(0 0 8px rgba(45,123,255,.9))}
@@ -530,6 +534,13 @@ footer{position:relative;z-index:2;background:var(--ink);padding:2rem var(--pad)
 .ct-mail:hover::after,.ct-mail:focus-visible::after{transform:scaleX(1);box-shadow:0 0 14px rgba(45,123,255,.7)}
 .ct-mail:hover svg,.ct-mail:focus-visible svg{transform:translateX(8px)}
 
+.ct-resume{align-self:flex-start;display:inline-flex;align-items:center;gap:.75rem;margin-top:1.35rem;padding:.62rem 1.25rem .62rem 1rem;border:1px solid rgba(45,123,255,.4);border-radius:999px;background:rgba(45,123,255,.06);font-size:.7rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-hi);transition:color .4s,border-color .4s,box-shadow .4s,background .4s}
+.ct-resume svg{width:.95rem;height:.95rem;flex:none;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.ct-resume i{font-style:normal;font-size:.62rem;letter-spacing:.1em;color:var(--faint);border-left:1px solid rgba(109,176,255,.28);padding-left:.75rem}
+.ct-resume:hover,.ct-resume:focus-visible{color:#fff;border-color:var(--blue);background:rgba(45,123,255,.12);box-shadow:0 0 26px rgba(45,123,255,.3)}
+.ct-resume:hover svg,.ct-resume:focus-visible svg{transform:translateY(4px)}
+.ct-resume.off{opacity:.5}
+
 .ct-social{display:flex;flex-wrap:wrap;gap:.9rem 1.6rem}
 .ct-social a{position:relative;display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--mute);cursor:none;transition:color .4s,transform .4s cubic-bezier(.2,.8,.2,1)}
 @media (pointer:coarse){.ct-social a{cursor:pointer}}
@@ -604,8 +615,9 @@ footer{position:relative;z-index:2;background:var(--ink);padding:2rem var(--pad)
   #gl5{display:none !important}
   .ct-fallback{display:none !important}
   .ct-mini{order:2; position:relative !important; right:auto !important; top:auto !important; translate:none !important; width:280px !important; height:280px !important; margin:1.2rem auto !important}
-  .ct-mail,.ct-social,.ct-form,.ct-cta{order:3;padding-left:var(--pad);padding-right:var(--pad);max-width:none}
+  .ct-mail,.ct-resume,.ct-social,.ct-form,.ct-cta{order:3;padding-left:var(--pad);padding-right:var(--pad);max-width:none}
   .ct-mail{margin-top:1.2rem}
+  .ct-resume{align-self:flex-start}
   .ct-cta{margin-bottom:1.6rem}
   .ct-vig{order:0;position:absolute}
   .ct-flash{order:0;position:absolute}
@@ -619,6 +631,6 @@ footer{position:relative;z-index:2;background:var(--ink);padding:2rem var(--pad)
 
 /* ── native cursor only — override any remaining cursor:none ── */
 html, body, a, button, input, textarea { cursor: auto !important; }
-a, button, .pj-hit, .pj-gh, .pj-arr, .skc, .ski, .sk-search input, .ct-mail, .ct-social a, .ct-send, .ct-cta, .ct-top { cursor: pointer !important; }
+a, button, .pj-hit, .pj-gh, .pj-arr, .skc, .ski, .sk-search input, .ct-mail, .ct-resume, .ct-social a, .ct-send, .ct-cta, .ct-top { cursor: pointer !important; }
 input, textarea, .ct-field input, .ct-field textarea { cursor: text !important; }
 #cursor { display:none !important; }
