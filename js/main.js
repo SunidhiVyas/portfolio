@@ -26,9 +26,10 @@ const MOTION = reduce ? 0.35 : 1;
 $('#fallback').src = "data:image/svg+xml;utf8," + encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 440'><defs><radialGradient id='g' cx='50%' cy='38%' r='60%'><stop offset='0%' stop-color='%232d7bff' stop-opacity='.45'/><stop offset='100%' stop-color='%232d7bff' stop-opacity='0'/></radialGradient></defs><rect width='300' height='440' fill='#02040a'/><circle cx='150' cy='170' r='170' fill='url(%23g)'/><g fill='#eef2fb'><ellipse cx='150' cy='90' rx='52' ry='56'/><rect x='118' y='138' width='64' height='18' rx='8'/><rect x='90' y='150' width='120' height='150' rx='40'/><rect x='40' y='170' width='34' height='110' rx='16'/><rect x='226' y='170' width='34' height='110' rx='16'/><rect x='108' y='290' width='34' height='120' rx='14'/><rect x='158' y='290' width='34' height='120' rx='14'/></g><g fill='#6db0ff'><ellipse cx='132' cy='86' rx='7' ry='9'/><ellipse cx='168' cy='86' rx='7' ry='9'/><circle cx='150' cy='200' r='14' fill-opacity='.85'/></g></svg>`);
 if (coarse){ $('#demoA').textContent='Touch & drag'; }
 
-/* ─────────── resume: verify the PDF exists, else offer an email request ─────────── */
+/* ─────────── resume: verify a local PDF exists, else offer an email request
+              (external links, e.g. Google Drive, are left untouched) ─────────── */
 [...document.querySelectorAll('[data-resume]')].forEach(a=>{
-  const href=a.getAttribute('href'); if(!href) return;
+  const href=a.getAttribute('href'); if(!href||/^https?:/i.test(href)) return;
   fetch(href,{method:'HEAD'}).then(r=>{
     if(r.ok) return;
     const to=(window.CONTACT&&window.CONTACT.contactConfig&&window.CONTACT.contactConfig.email)||'';

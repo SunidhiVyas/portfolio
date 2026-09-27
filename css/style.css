@@ -7,6 +7,8 @@
   --faint:rgba(210,222,255,.62);
   --blue:#2d7bff;          /* electric blue */
   --blue-hi:#6db0ff;
+  --green:#2ee6a8;         /* resume / download accent */
+  --green-hi:#6dffc8;
   --serif:'Instrument Serif','Cormorant Garamond',Georgia,'Times New Roman',serif;
   --sans:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
   --pad:clamp(20px,5.2vw,84px);
@@ -74,9 +76,12 @@ h1.name .last{color:var(--blue);text-shadow:0 0 34px rgba(45,123,255,.55);margin
 .cta:hover svg{transform:translateX(8px)}
 .cta:hover::before{box-shadow:0 0 26px 2px var(--blue)}
 .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(.9rem,2.4vw,2.2rem)}
-.cta-2{gap:1rem;padding-left:1.5rem}
+.cta-2{gap:1rem;padding-left:1.5rem;color:var(--green);text-shadow:0 0 16px rgba(46,230,168,.45)}
+.cta-2::before{background:linear-gradient(to bottom,transparent,var(--green) 20%,var(--green) 80%,transparent);box-shadow:0 0 14px var(--green)}
 .cta-2 svg{order:-1;width:1.05rem;height:1.05rem;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.cta-2:hover{color:#fff;text-shadow:0 0 22px rgba(46,230,168,.9)}
 .cta-2:hover svg{transform:translateY(5px)}
+.cta-2:hover::before{box-shadow:0 0 26px 2px var(--green)}
 .social{display:flex;gap:1.5rem;margin-top:clamp(1.2rem,3vh,2.2rem);padding-left:1.7rem}
 .social a{color:var(--faint);transition:color .4s,filter .4s;display:grid;place-items:center;width:1.4rem;height:1.4rem}
 .social a:hover{color:var(--blue-hi);filter:drop-shadow(0 0 8px rgba(45,123,255,.9))}
@@ -534,10 +539,10 @@ footer{position:relative;z-index:2;background:var(--ink);padding:2rem var(--pad)
 .ct-mail:hover::after,.ct-mail:focus-visible::after{transform:scaleX(1);box-shadow:0 0 14px rgba(45,123,255,.7)}
 .ct-mail:hover svg,.ct-mail:focus-visible svg{transform:translateX(8px)}
 
-.ct-resume{align-self:flex-start;display:inline-flex;align-items:center;gap:.75rem;margin-top:1.35rem;padding:.62rem 1.25rem .62rem 1rem;border:1px solid rgba(45,123,255,.4);border-radius:999px;background:rgba(45,123,255,.06);font-size:.7rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-hi);transition:color .4s,border-color .4s,box-shadow .4s,background .4s}
+.ct-resume{align-self:flex-start;display:inline-flex;align-items:center;gap:.75rem;margin-top:1.35rem;padding:.62rem 1.25rem .62rem 1rem;border:1px solid rgba(46,230,168,.45);border-radius:999px;background:rgba(46,230,168,.07);font-size:.7rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--green);transition:color .4s,border-color .4s,box-shadow .4s,background .4s}
 .ct-resume svg{width:.95rem;height:.95rem;flex:none;transition:transform .5s cubic-bezier(.2,.7,.2,1)}
-.ct-resume i{font-style:normal;font-size:.62rem;letter-spacing:.1em;color:var(--faint);border-left:1px solid rgba(109,176,255,.28);padding-left:.75rem}
-.ct-resume:hover,.ct-resume:focus-visible{color:#fff;border-color:var(--blue);background:rgba(45,123,255,.12);box-shadow:0 0 26px rgba(45,123,255,.3)}
+.ct-resume i{font-style:normal;font-size:.62rem;letter-spacing:.1em;color:rgba(46,230,168,.7);border-left:1px solid rgba(46,230,168,.3);padding-left:.75rem}
+.ct-resume:hover,.ct-resume:focus-visible{color:#fff;border-color:var(--green);background:rgba(46,230,168,.14);box-shadow:0 0 26px rgba(46,230,168,.32)}
 .ct-resume:hover svg,.ct-resume:focus-visible svg{transform:translateY(4px)}
 .ct-resume.off{opacity:.5}
 
